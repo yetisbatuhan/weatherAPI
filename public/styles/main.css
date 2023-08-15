@@ -23,6 +23,9 @@ form input{
 .lane1-left{
     display: block;
     padding-top: 20px;
+    text-align: center;
+    margin: 20px;
+    
 }
 .lane h5{
     padding: 10px 10px;
