@@ -16,111 +16,59 @@
 <body>
   <div class="container">
     <div class="row">
-
-      <div class="col-8">
-
+      <div class="col top-lane-search">
         <form action="/" method="post">
           <input type="text" id="secretInput" name="city" placeholder="search city">
-          <!-- <input id="get" type="submit" value="GET" formaction="/"></div> -->
       </div>
-      <div class="row">
-        <div class="col-8">
-          <div class="lane lane-top">
-            <div class="lane1-left">
-              <h1>city</h1>
-              <h6>weather sitition now</h6>
-              <h1>celcius</h1>
-            </div>
-            <div class="lane1-right">
-              <% if(locals.topLane !== undefined){ %>
-                <h5>  <img src="http://openweathermap.org/img/w/<%= topLane.weather[0].icon %>.png" alt="" width="250px">  </h5>
-            <% } else { %>
-            
-          <% } %> 
-              <!-- <img src="/images/rain.png" width="250px"> -->
-              <!-- <img src="/images/snow.png" width="250px"> -->
-            </div>
-
-
-
-          </div>
-          <div class="lane ">
-            <h5>today's forecast</h5>
-            <div class="lane-mid">
-              <div class="lane-mid-box">
-                <h5>clock am</h5>
-                <img src="/images/sun.png" width="90px">
-                <h4>20</h4>
-              </div>
-              <div class="lane-mid-box">
-                <h5>2</h5>
-                <img src="/images/sun.png" width="90px">
-                <h4>20</h4>
-              </div>
-              <div class="lane-mid-box">
-                <h5>2</h5>
-                <img src="/images/sun.png" width="90px">
-                <h4>20</h4>
-              </div>
-              <div class="lane-mid-box">
-                <h5>2</h5>
-                <img src="/images/sun.png" width="90px">
-                <h4>20</h4>
-              </div>
-              <div class="lane-mid-box">
-                <h5>2</h5>
-                <img src="/images/sun.png" width="90px">
-                <h4>20</h4>
-              </div>
-              <div class="lane-mid-box">
-                <h5>2</h5>
-                <img src="/images/sun.png" width="90px">
-                <h4>20</h4>
-              </div>
-            </div>
-          </div>
-          <div class="lane">
-            <div class="div-top">
-              <h6>AIR CONDİTİONS</h6>
-              
-            </div>
-            
-            <div class="div-mid">
-             <h6>humidity</h6> 
-              <h6>wind</h6>
-            </div>
-            <div class="div-mid">
-              <h6>%</h6> 
-              <h6>km/h</h6>
-            </div>
-          
-        </div>
-
-        </div>
-
-
-        <div class="col-4 days-weather">
-          <h5>7 days forecast</h5> 
-          <% if(locals.topLane !== undefined){ %>
-            <h5>  <img src="http://openweathermap.org/img/w/<%= topLane.weather[0].icon %>.png" alt="" width="250px">  </h5>
-        <% } else { %>
-        
-      <% } %>   
-        </div>
-      </div>
-
-
     </div>
   </div>
+  <div class="container mt-2 top-lane">
+<div class="row">
+  
+  <div class="col-8">
+    <div class="row border border-primary">
+      <div class="col-6">
+        <h1>City</h1>
+        <h6>varible</h6>
+        <h1>celcius</h1>
+
+      </div>
+        <div class="col-6">
+          <h1>picture will be </h1>
+          
+        </div>
+        </div>
+        <div class="row  mt-3 border border-primary">
+          <div class="col"><h6>batubatu</h6>
+          </div>
+          <div class="col"><h6>batubatu</h6></div>
+          <div class="col"><h6>batubatu</h6></div>
+          <div class="col"><h6>batubatu</h6></div>
+          <div class="col"><h6>batubatu</h6></div>
+          <div class="col"><h6>batubatu</h6></div>
+        </div>
+        <div class="row">
+          <div class="col">humidity</div>
+          <div class="col">wind</div>
+        </div>
+  </div>
+  <div class="col-4 border border-primary">
+    <div class="row">
+      <div class="col-12">
+        <h2>batuhan</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, sunt.</p>
+      </div>
+      
+
+    </div>
+    </div>
+</div>
   </div>
 
-  </div>
 
 
 
-
-
-  </form>
+  
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
