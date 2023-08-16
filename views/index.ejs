@@ -32,7 +32,11 @@
               <h1>celcius</h1>
             </div>
             <div class="lane1-right">
-              <img src="/images/sun.png" width="250px">
+              <% if(locals.topLane !== undefined){ %>
+                <h5>  <img src="http://openweathermap.org/img/w/<%= topLane.weather[0].icon %>.png" alt="" width="250px">  </h5>
+            <% } else { %>
+            
+          <% } %> 
               <!-- <img src="/images/rain.png" width="250px"> -->
               <!-- <img src="/images/snow.png" width="250px"> -->
             </div>
@@ -96,7 +100,12 @@
 
 
         <div class="col-4 days-weather">
-          <h5>7 days forecast</h5>
+          <h5>7 days forecast</h5> 
+          <% if(locals.topLane !== undefined){ %>
+            <h5>  <img src="http://openweathermap.org/img/w/<%= topLane.weather[0].icon %>.png" alt="" width="250px">  </h5>
+        <% } else { %>
+        
+      <% } %>   
         </div>
       </div>
 
