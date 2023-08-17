@@ -3,7 +3,23 @@ body{
     color: white;
 }
 .top-lane-search input{
-    background-color: #202B3C;
+    background-color: #dde4ee;
     width: 66%;
+    border-radius: 5px;
+    
+}
+.top-Lane-city-now{
+    background-color: #0B121E;
+}
+.top-lane-city-times{
+    background-color: #202B3C;
+    border: 1px solid none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+.top-lane-city-times-box{
+    border-left: 1px solid #6b87ad;
+    /* border-left-style: dashed; */
     
 }
