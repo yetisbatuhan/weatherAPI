@@ -28,7 +28,17 @@ function weatherTime(x) {
     }    
     return hour ;
 }
+function weatherforecast(x) {
+        const newJson = [];
+        for (let i = 0; i < x.list.length; i++) {
+            if ( -1 !== x.list[i].dt_txt.search("12:00")) {
+                newJson.push(x.list[i]);
+            }
+           
+}
 
+return newJson ;
+}
 
 app.post("/",async (req, res) => {
     const city = req.body.city ;
@@ -42,12 +52,14 @@ app.post("/",async (req, res) => {
     const celciusNow = Math.floor(current.data.main.temp-273,15);
     // console.log(current.data); // hum temp, wind, clouds
     const weatherDays = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityLatFixed}&lon=${cityLonFixed}&appid=${weatherKey}`);
+    // console.log(weatherDays.data)
     
+    // weatherforecast(weatherDays.data)
 
 
 
 
-    res.render("index.ejs",{city: cityName,celcius: celciusNow,topLane: current.data,weatherTime: weatherTime(weatherDays.data.list),weatherDays: weatherDays.data});
+    res.render("index.ejs",{city: cityName,celcius: celciusNow,topLane: current.data,weatherTime: weatherTime(weatherDays.data.list),weatherDays: weatherDays.data,weather5Days: weatherforecast(weatherDays.data)});
     
 });
 

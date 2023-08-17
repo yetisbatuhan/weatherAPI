@@ -3,7 +3,7 @@ body{
     color: white;
 }
 .top-lane-search input{
-    background-color: #dde4ee;
+    background-color: #7489aa;
     width: 66%;
     border-radius: 5px;
     
@@ -22,4 +22,9 @@ body{
     border-left: 1px solid #6b87ad;
     /* border-left-style: dashed; */
     
+}
+.right-lane{
+    border: 1px solid none;
+    background-color: #202B3C;
+    border-radius: 10px;
 }
