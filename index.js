@@ -1,7 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
-
+import dotenv from 'dotenv';
+dotenv.config();
 const app = express();
 const port = 3000;
 
@@ -10,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // express.static middleware'ini önce eklemelisiniz
 
-const weatherKey = "2a09ebb1f33ad2ac1877c2a1e7ad3113";
+const weatherKey = process.env.API_KEY;
 app.get("/", (req, res) => {
     res.render("index.ejs");
 });
@@ -52,7 +53,7 @@ app.post("/",async (req, res) => {
     const celciusNow = Math.floor(current.data.main.temp-273,15);
     // console.log(current.data); // hum temp, wind, clouds
     const weatherDays = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityLatFixed}&lon=${cityLonFixed}&appid=${weatherKey}`);
-    // console.log(weatherDays.data)
+   
     
     // weatherforecast(weatherDays.data)
 
