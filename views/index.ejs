@@ -69,7 +69,7 @@
               <% } }%>
 
         </div>
-        <div class="row  p-1 top-lane-city-times">
+        <div class="row   top-lane-city-times">
           <%if(locals.weatherTime){ %>
             <div class="col-6 text-center  ">
               <h2><img width="25" height="25" src="https://img.icons8.com/ios-filled/50/wet.png" alt="wet" /> humidity
@@ -89,31 +89,31 @@
                 </div>
 
                 <% } %>
-                  <div class="row  p-1 top-lane-city-times">
+              </div>
+                  <div class="row   top-lane-city-times">
                     <%if(locals.weatherTime){ %>
-                      <div class="col-6 text-center  ">
-                        <h2><img width="25" height="25" src="https://img.icons8.com/ios-filled/50/wet.png" alt="wet" />
-                          humidity</h2>
+                      <div class="col-6 text-center">
+                        <h2><img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/pressure.png" alt="pressure"/>
+                        Pressure</h2>
                         <h5>
-                          <%= topLane.main.humidity %>%
+                          <%= topLane.main.pressure %> hPa
                         </h5>
                       </div>
 
                       <% } %>
                         <%if(locals.weatherTime){ %>
                           <div class="col-6 text-center">
-                            <h2><img width="25" height="25" src="https://img.icons8.com/color/48/wind.png" alt="wind" />
-                              wind</h2>
+                            <h2><img width="25" height="25" src="https://img.icons8.com/fluency/48/cloud.png" alt="cloud"/>
+                              clouds quantity</h2>
                             <h5>
-                              <%= topLane.wind.speed %> km/h
+                              <%= topLane.clouds.all %> 
                             </h5>
                           </div>
 
                           <% } %>
 
                   </div>
-        </div>
-      </div>
+              </div>
         <div class="col-4 border border-primary">
           <div class="row">
             <div class="col-12">
