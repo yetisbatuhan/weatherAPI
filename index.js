@@ -27,6 +27,7 @@ function weatherTime(x) {
          
         
     }    
+    
     return hour ;
 }
 function weatherforecast(x) {
@@ -40,7 +41,18 @@ function weatherforecast(x) {
 
 return newJson ;
 }
-
+function weatherDaysDates(x) {  // five days calc unix to string 
+       const data = weatherforecast(x);
+        const dates = [];    
+    for (let i = 0; i < data.length; i++) {
+        const time =data[i].dt ;
+        const date = new Date(time * 1000);
+        const f =new Intl.DateTimeFormat('tr-US').format(date) ;
+        dates.push(f);
+     }  
+    
+     return dates;
+}
 app.post("/",async (req, res) => {
     const city = req.body.city ;
     const geoMap = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${weatherKey}`)
@@ -60,7 +72,7 @@ app.post("/",async (req, res) => {
 
 
 
-    res.render("index.ejs",{city: cityName,celcius: celciusNow,topLane: current.data,weatherTime: weatherTime(weatherDays.data.list),weatherDays: weatherDays.data,weather5Days: weatherforecast(weatherDays.data)});
+    res.render("index.ejs",{city: cityName,celcius: celciusNow,topLane: current.data,weatherTime: weatherTime(weatherDays.data.list),weatherDays: weatherDays.data,weather5Days: weatherforecast(weatherDays.data),weatherCalender:  weatherDaysDates(weatherDays.data)});
     
 });
 

@@ -3,7 +3,7 @@ body{
     color: white;
 }
 .top-lane-search input{
-    background-color: #7489aa;
+    background-color: hsl(0, 0%, 100%);
     width: 66%;
     border-radius: 5px;
     
