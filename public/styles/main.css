@@ -34,3 +34,11 @@ body{
 
 
 }
+.right-lane-list{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    justify-content: space-between;
+    margin-top: 30px;
+}
