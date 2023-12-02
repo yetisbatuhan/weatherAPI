@@ -19,6 +19,8 @@
       <div class="col-md-8 top-lane-search">
         <form action="/" method="post">
           <input type="text" id="secretInput" name="city" placeholder="search city">
+          <button class="rounded-pill" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </div>
@@ -32,7 +34,9 @@
               <h2>
                 <%= city %>
               </h2>
-              <% } else {} %>
+              <% } else { %>
+                <h2>City</h2>
+                <% } %> 
                 <%if(locals.city){ %>
                   <h5>
                     <%= topLane.weather[0].description %>
@@ -51,12 +55,13 @@
               <% } else {} %>
 
 
-          </div>
+          </div> 
+          <!-- hourly fourcast -->
         </div>
-        <div class="row  mt-3  text-center top-lane-city-times ">
+        <div class="row  mt-3   top-lane-city-times ">
           <%if(locals.weatherTime){ %>
             <% for (let i=0; i< weatherTime.length; i++) { %>
-              <div class="col-md-2 col-sm-6  top-lane-city-times-box">
+              <div class="col-md-2 col-sm-6 text-center top-lane-city-times-box">
                 <h6>
                   <%= weatherTime[i] %>
                 </h6>
@@ -66,8 +71,9 @@
                 </h4>
               </div>
 
-              <% } }%>
-
+              <% } } else {%>
+                  <h2 class="">Hourly Forecast</h2>
+                  <% } %>
         </div>
         <div class="row   top-lane-city-times">
           <%if(locals.weatherTime){ %>
@@ -79,7 +85,11 @@
               </h5>
             </div>
 
-            <% } %>
+            <% } else { %>
+              <div class="col-6 text-center">
+              <h2><img width="25" height="25" src="https://img.icons8.com/ios-filled/50/wet.png" alt="wet" /> humidity
+              </h2></div>
+              <% } %>
               <%if(locals.weatherTime){ %>
                 <div class="col-6 text-center">
                   <h2><img width="25" height="25" src="https://img.icons8.com/color/48/wind.png" alt="wind" /> wind</h2>
@@ -88,7 +98,11 @@
                   </h5>
                 </div>
 
-                <% } %>
+                <% } else { %>
+                  <div class="col-6 text-center">
+                  <h2><img width="25" height="25" src="https://img.icons8.com/color/48/wind.png" alt="wind" /> wind</h2>
+                  </div>
+                    <% } %>
         </div>
         <div class="row   top-lane-city-times">
           <%if(locals.weatherTime){ %>
@@ -100,7 +114,11 @@
               </h5>
             </div>
 
-            <% } %>
+            <% } else { %>
+              <div class="col-6 text-center">
+              <h2><img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/pressure.png" alt="pressure" />
+                Pressure</h2></div>
+                <% } %>
               <%if(locals.weatherTime){ %>
                 <div class="col-6 text-center">
                   <h2><img width="25" height="25" src="https://img.icons8.com/fluency/48/cloud.png" alt="cloud" />
@@ -110,7 +128,11 @@
                   </h5>
                 </div>
 
-                <% } %>
+                <% } else {  %>
+                  <div class="col-6 text-center">
+                  <h2><img width="25" height="25" src="https://img.icons8.com/fluency/48/cloud.png" alt="cloud" />
+                    clouds quantity</h2></div>
+                    <% } %>
 
         </div>
       </div>
@@ -137,7 +159,10 @@
             
 
             <% } %>
-              <% } %>
+              <% } else { %>
+                <div class="pt-2 "><h6>Forecast 5 Days</h6></div>
+                 
+             <% } %> 
       </div>
 
     </div>
