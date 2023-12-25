@@ -30,7 +30,7 @@ body{
 }
 .right-lane-box{
     border-top: 1px solid #6b87ad;
-    border-top-style: dashed;
+    border-top-style: inherit;
 
 
 }
@@ -40,5 +40,6 @@ body{
     text-align: center;
     height: auto;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 40px;
+   
 }

@@ -138,16 +138,16 @@
       </div>
       <div class="col-md-4  right-lane ">
         <%if(locals.weather5Days){ %>
-        <div class="pt-2"><h6>Forecast 5 Days</h6></div>  
+        <div class="pt-2 "><h6>Forecast 5 Days</h6></div>  
           <% for (let i=0; i < weather5Days.length; i++) { %>
             <div class="row ">
              <div class="border-top border-white right-lane-list">
-              <div class="col-3">
+              <div class="col-4 ">
               <h5>
               <%= weatherCalender[i] %>
             </h5></div>
-             <div class="col-3"><img  src="http://openweathermap.org/img/w/<%= weather5Days[i].weather[0].icon %>.png" alt=""></div>
-             <div class="col-3">
+             <div class="col-4 "><img  src="http://openweathermap.org/img/w/<%= weather5Days[i].weather[0].icon %>.png" alt=""></div>
+             <div class="col-4 ">
               <p>
                 <%= weather5Days[i].weather[0].description %>
               </p>
